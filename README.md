@@ -84,8 +84,8 @@ If you know the upcoming data fields hold more info than you need in the log or 
 
     $Log = New-LogAnalyticsLog @splat_LogAnalytics
 
-
-**All this must only be defined ONCE at the beginning of the script, before you start logging anything!**
+* The Expression for `PrimarySMTPAddress` now guarantees that only the address string gets logged, regardless if you are running the script directly on your on-prem Exchange or Exchange Management Tools machine, in remoting session or with Exchange Online.
+* **All this must only be defined ONCE at the beginning of the script, before you start logging anything!**
 
 ### New-LogAnalyticsLine -Log LogAnalyticsLog -EventType string -Message string
 ### New-LogAnalyticsLine -Log LogAnalyticsLog -EventType string -Data psobject[]
