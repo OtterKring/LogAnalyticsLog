@@ -3,7 +3,16 @@ A powershell module for simple logging to LogAnalytics
 
 This module is roughly based on the the example code from Microsoft published [here](https://learn.microsoft.com/en-us/azure/azure-monitor/logs/data-collector-api?tabs=powershell#sample-requests). I rewrote it to make logging as simple as possible while coding the actual script using it.
 
-## Available Commands
+## Available Functions
+
+|Function|Description|
+|---|---|
+|`New-LogAnalyticsLog`|Define your log environment|
+|`New-LogAnalyticsLine`|Prepare a line for posting to LogAnalytics|
+|`Write-LogAnalytics`|Post one or more prepared lines to LogAnalytics|
+|`Write-LogAnalyticsLine`|Post one line to LogAnalytics, no line preparation necessary|
+
+## Function Details
 
 ### New-LogAnalyticsLog -WorkspaceId guid -SharedKey string -Table string -Columns psobject -Events string[]
 
