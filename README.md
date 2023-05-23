@@ -7,6 +7,8 @@ This module is roughly based on the the example code from Microsoft published [h
 
 ### New-LogAnalyticsLog -WorkspaceId guid -SharedKey string -Table string -Columns psobject -Events string[]
 
+**This must be run before any other cmdlet of this module to prepare the environment for posting to LogAnalytics the way you want it!**
+
 Creates an object holding all the metadata used for logging to LogAnalytics.
 |Parameter|Description|
 |---|---|
